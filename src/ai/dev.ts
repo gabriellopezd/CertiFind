@@ -1,4 +1,2 @@
-import { config } from 'dotenv';
-config();
-
-import '@/ai/flows/ai-search-refinement-flow.ts';
+// AI features disabled
+export {};
