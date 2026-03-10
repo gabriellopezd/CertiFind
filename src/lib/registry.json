@@ -1,0 +1,20 @@
+{
+  "certificates": [
+    {
+      "id": "CERT-001",
+      "name": "Curso de Next.js Avanzado",
+      "recipient": "Juan Pérez",
+      "issueDate": "2024-01-15",
+      "fileName": "certificate-1.pdf",
+      "description": "Certificado de finalización del curso intensivo de Next.js 15."
+    },
+    {
+      "id": "CERT-002",
+      "name": "Workshop de React y TypeScript",
+      "recipient": "Ana Gómez",
+      "issueDate": "2024-02-20",
+      "fileName": "certificate-2.pdf",
+      "description": "Participación activa en el taller de tipado avanzado en React."
+    }
+  ]
+}
