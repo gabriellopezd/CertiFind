@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Professional document repository background",
+      "imageUrl": "https://picsum.photos/seed/certifind-hero/1200/600",
+      "imageHint": "professional certificates"
+    },
+    {
+      "id": "cert-preview-1",
+      "description": "Sample certificate preview",
+      "imageUrl": "https://picsum.photos/seed/cert1/400/300",
+      "imageHint": "document certificate"
+    },
+    {
+      "id": "cert-preview-2",
+      "description": "Sample certificate preview",
+      "imageUrl": "https://picsum.photos/seed/cert2/400/300",
+      "imageHint": "academic diploma"
+    },
+    {
+      "id": "cert-preview-3",
+      "description": "Sample certificate preview",
+      "imageUrl": "https://picsum.photos/seed/cert3/400/300",
+      "imageHint": "achievement award"
+    }
+  ]
 }
