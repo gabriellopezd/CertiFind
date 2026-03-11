@@ -1,62 +1,58 @@
-import React from 'react';
-import { Download, Calendar, User, Hash } from 'lucide-react';
-
-interface Certificate {
-  id: string;
-  name: string;
-  recipient: string;
-  issueDate: string;
-  fileName: string;
-  description?: string;
-}
+import Link from 'next/link';
+import { Certificate } from '@/lib/types';
+import { Calendar, User, ArrowRight, FileText, ImageIcon } from 'lucide-react';
 
 interface CertificateCardProps {
   certificate: Certificate;
 }
 
-const CertificateCard: React.FC<CertificateCardProps> = ({ certificate }) => {
-  const downloadPath = `/certificates/${certificate.fileName}`;
-
+export default function CertificateCard({ certificate }: CertificateCardProps) {
   return (
-    <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 flex flex-col h-full hover:shadow-md transition-shadow duration-300">
-      <div className="flex-1">
-        <div className="flex items-center gap-2 text-blue-600 mb-3">
-          <Hash className="w-4 h-4" />
-          <span className="text-xs font-bold uppercase tracking-wider">{certificate.id}</span>
+    <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-slate-200/80 overflow-hidden transform hover:-translate-y-1 group">
+      <Link href={`/certificate/${certificate.id}`} legacyBehavior>
+        <a className="block bg-slate-100/80 aspect-video overflow-hidden">
+          {certificate.previewImage ? (
+            <img 
+              src={certificate.previewImage} 
+              alt={`Vista previa de ${certificate.name}`}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          ) : (
+            <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 bg-slate-100">
+              <ImageIcon className="w-12 h-12 mb-2"/>
+              <span className="text-xs">Sin vista previa</span>
+            </div>
+          )}
+        </a>
+      </Link>
+      <div className="p-5">
+        <div className="flex items-start justify-between mb-3">
+            <div>
+                <h3 className="text-lg font-bold text-slate-800 leading-tight group-hover:text-primary transition-colors">
+                   <Link href={`/certificate/${certificate.id}`}>{certificate.name}</Link>
+                </h3>
+            </div>
         </div>
         
-        <h2 className="text-xl font-bold text-slate-800 mb-2 leading-tight">
-          {certificate.name}
-        </h2>
-        
-        {certificate.description && (
-          <p className="text-slate-500 text-sm mb-4 line-clamp-2">
-            {certificate.description}
-          </p>
-        )}
-
-        <div className="space-y-2 mb-6">
-          <div className="flex items-center gap-2 text-slate-600">
-            <User className="w-4 h-4" />
-            <span className="text-sm font-medium">{certificate.recipient}</span>
-          </div>
-          <div className="flex items-center gap-2 text-slate-500">
-            <Calendar className="w-4 h-4" />
-            <span className="text-sm">{certificate.issueDate}</span>
-          </div>
+        <div className="space-y-3 text-sm">
+            <div className="flex items-center gap-3 text-slate-600">
+                <User className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                <span className="font-medium truncate">{certificate.recipient}</span>
+            </div>
+            <div className="flex items-center gap-3 text-slate-600">
+                <Calendar className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                <span className="font-medium">{certificate.issueDate}</span>
+            </div>
         </div>
       </div>
-
-      <a
-        href={downloadPath}
-        download={certificate.fileName}
-        className="flex items-center justify-center gap-2 w-full bg-slate-900 text-white font-semibold py-3 px-4 rounded-xl hover:bg-blue-600 transition-colors duration-300"
-      >
-        <Download className="w-4 h-4" />
-        Descargar PDF
-      </a>
+      <Link href={`/certificate/${certificate.id}`} legacyBehavior>
+        <a className="block bg-slate-50 group-hover:bg-accent/10 p-4 text-center text-primary font-semibold group-hover:text-accent transition-all duration-300">
+            <div className="flex items-center justify-center gap-2">
+                <span>Ver Detalles del Certificado</span>
+                <ArrowRight className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
+            </div>
+        </a>
+      </Link>
     </div>
   );
-};
-
-export default CertificateCard;
+}

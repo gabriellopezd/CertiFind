@@ -1,4 +1,4 @@
-# **App Name**: CertiFind
+# **App Name**: CertiFacil
 
 ## Core Features:
 
