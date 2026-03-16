@@ -11,7 +11,7 @@ export async function GET(request: Request) {
   }
 
   // Prevenir directory traversal vulnerabilities (ej. buscar archivos fuera de la carpeta con ../..)
-  const normalizedFile = path.normalize(file).replace(/^(\.\.(\/|\\|$))+/, '');
+  const normalizedFile = path.normalize(file).replace(/^(\.\.(\\/|\\|$))+/, '');
   const filePath = path.join(process.cwd(), 'public', 'certificates', normalizedFile);
 
   if (!fs.existsSync(filePath)) {
@@ -23,7 +23,7 @@ export async function GET(request: Request) {
   // Forzar la descarga en el navegador con el nombre original del archivo
   const headers = new Headers();
   const encodedFileName = encodeURIComponent(normalizedFile);
-  headers.append('Content-Disposition', `attachment; filename="certificado.pdf"; filename*=UTF-8''${encodedFileName}`);
+  headers.append('Content-Disposition', `attachment; filename="${normalizedFile}"; filename*=UTF-8''${encodedFileName}`);
   headers.append('Content-Type', 'application/pdf');
 
   return new NextResponse(fileBuffer as any, {

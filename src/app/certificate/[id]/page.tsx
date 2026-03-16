@@ -7,7 +7,7 @@ import { format, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
 
 interface PageProps {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }
 
 function formatDate(dateStr: string): string {
@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { id } = await params;
+  const { id } = params;
   const cert = registry.certificates.find(c => c.id === id);
   if (!cert) return { title: 'Certificado no encontrado' };
   return {
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function CertificateDetailPage({ params }: PageProps) {
-  const { id } = await params;
+  const { id } = params;
   const certificate = registry.certificates.find(cert => cert.id === id);
 
   if (!certificate) {
