@@ -17,12 +17,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="bg-primary/5 p-2 rounded-xl border border-primary/10 group-hover:bg-primary/10 group-hover:scale-105 transition-all duration-300 shadow-sm overflow-hidden relative w-10 h-10">
+            <div className="bg-primary/5 rounded-xl border border-primary/10 group-hover:bg-primary/10 group-hover:scale-105 transition-all duration-300 shadow-sm overflow-hidden relative w-10 h-10">
               <Image 
                 src={placeholders.logo.url} 
                 alt={placeholders.logo.alt} 
                 fill
-                className="object-cover"
+                className="object-contain"
                 data-ai-hint="company logo"
               />
             </div>

@@ -156,12 +156,12 @@ export default function HomePage() {
       <footer className="bg-slate-900 text-slate-300 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
-            <div className="bg-slate-800 p-3 rounded-full shadow-lg relative w-20 h-20 mx-auto overflow-hidden">
+            <div className="bg-slate-800 rounded-full shadow-lg relative w-20 h-20 mx-auto overflow-hidden">
               <Image 
                 src={placeholders.logo.url} 
                 alt="CertiFind Logo" 
                 fill 
-                className="object-cover opacity-80"
+                className="object-contain"
                 data-ai-hint="company logo footer"
               />
             </div>
