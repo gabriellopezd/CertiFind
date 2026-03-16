@@ -40,8 +40,6 @@ export default async function CertificateDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const downloadPath = `/certificates/${certificate.fileName}`;
-
   return (
     <div className="min-h-screen bg-background font-sans text-slate-800">
 
@@ -80,7 +78,7 @@ export default async function CertificateDetailPage({ params }: PageProps) {
             )}
 
             <a
-              href={`/api/download?file=${encodeURIComponent(certificate.fileName)}`}
+              href={`/api/download?id=${certificate.id}`}
               download={certificate.fileName}
               className="flex items-center justify-center gap-3 bg-primary text-white font-bold py-4 px-8 rounded-full hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 w-full text-lg transform hover:-translate-y-0.5"
             >
