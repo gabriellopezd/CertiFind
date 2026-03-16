@@ -23,7 +23,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Cabeceras de seguridad y optimización ajustadas para permitir previsualización
   async headers() {
     return [
       {
@@ -31,36 +30,15 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'SAMEORIGIN', // Permitir enmarcado en el mismo origen para la previsualización
+            value: 'ALLOW-FROM *', // Permitir enmarcado para entornos de desarrollo
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors 'self' *;", // Permitir previsualización en Cloud Workstations
           },
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://picsum.photos https://images.unsplash.com; font-src 'self' data:; connect-src 'self'; upgrade-insecure-requests;",
-          },
-        ],
-      },
-      {
-        source: '/certificates/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-          {
-            key: 'Content-Disposition',
-            value: 'attachment',
           },
         ],
       },
