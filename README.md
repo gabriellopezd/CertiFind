@@ -3,6 +3,10 @@
 
 Este proyecto es la plataforma oficial de validación de certificados de Intellecto SAS, construida con Next.js 15 y desplegada en **https://certifind.intellecto.com.co**.
 
+---
+**📅 Última Actualización de Despliegue:** 22 de Marzo de 2024
+---
+
 ## 🚀 Guía de Despliegue (Firebase App Hosting)
 
 Sigue estos pasos en tu Consola de Firebase para lanzar el sitio:
