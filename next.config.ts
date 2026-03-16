@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Cabeceras de seguridad y optimización para producción
+  // Cabeceras de seguridad y optimización ajustadas para permitir previsualización
   async headers() {
     return [
       {
@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
+            value: 'SAMEORIGIN', // Permitir enmarcado en el mismo origen para la previsualización
           },
           {
             key: 'X-Content-Type-Options',
@@ -46,12 +46,8 @@ const nextConfig: NextConfig = {
             value: '1; mode=block',
           },
           {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
-          },
-          {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://picsum.photos https://images.unsplash.com; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests;",
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://picsum.photos https://images.unsplash.com; font-src 'self' data:; connect-src 'self'; upgrade-insecure-requests;",
           },
         ],
       },
