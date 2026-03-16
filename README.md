@@ -20,10 +20,14 @@ Sigue estos pasos en tu Consola de Firebase para lanzar el sitio:
 3. Selecciona el repositorio de este proyecto y la rama `main`.
 4. Firebase detectará automáticamente Next.js y comenzará el despliegue.
 
-### 3. Vincular el Dominio Personalizado
-1. Una vez desplegado, ve a la pestaña **Custom Domains**.
-2. Introduce `certifind.intellecto.com.co`.
-3. Sigue las instrucciones para añadir los registros DNS (CNAME o A) en tu panel de Intellecto.
+### 3. Vincular el Dominio Personalizado (¡IMPORTANTE!)
+Si la conexión desapareció, es necesario volver a añadirla:
+1. Una vez desplegado, ve a la pestaña **Custom Domains** (Dominios).
+2. Haz clic en **Agregar un dominio personalizado**.
+3. Introduce exactamente: `certifind.intellecto.com.co`.
+4. Firebase te dará unos registros **CNAME** o **A**. 
+5. **Acción necesaria:** Debes entrar a tu panel de control de dominio (donde compraste el dominio de Intellecto) y añadir esos registros.
+6. Una vez añadidos, Firebase tardará de 1 a 24 horas en mostrar el estado como "Conectado".
 
 ---
 *CertiFind es una marca de Intellecto para la validación académica segura.* 🚀
