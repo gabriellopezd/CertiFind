@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Certificate } from '@/lib/types';
 import { Calendar, User, ArrowRight, ImageIcon, Hash } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
@@ -19,12 +20,13 @@ function formatDate(dateStr: string): string {
 export default function CertificateCard({ certificate }: CertificateCardProps) {
   return (
     <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-slate-200/80 overflow-hidden transform hover:-translate-y-1 group flex flex-col">
-      <Link href={`/certificate/${certificate.id}`} className="block bg-slate-100/80 aspect-video overflow-hidden">
+      <Link href={`/certificate/${certificate.id}`} className="block bg-slate-100/80 aspect-video overflow-hidden relative">
         {certificate.previewImage ? (
-          <img
+          <Image
             src={certificate.previewImage}
             alt={`Vista previa de ${certificate.name}`}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 bg-slate-100">
@@ -35,7 +37,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
       </Link>
 
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="text-base font-bold text-slate-800 leading-tight group-hover:text-primary transition-colors mb-3">
+        <h3 className="text-base font-bold text-slate-800 leading-tight group-hover:text-primary transition-colors mb-3 line-clamp-2 h-10">
           <Link href={`/certificate/${certificate.id}`}>{certificate.name}</Link>
         </h3>
 
@@ -58,7 +60,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
       <Link href={`/certificate/${certificate.id}`}
         className="block bg-slate-50 group-hover:bg-accent/10 p-4 text-center text-primary font-semibold group-hover:text-accent transition-all duration-300">
         <div className="flex items-center justify-center gap-2">
-          <span>Ver Detalles del Certificado</span>
+          <span>Ver Detalles</span>
           <ArrowRight className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
         </div>
       </Link>

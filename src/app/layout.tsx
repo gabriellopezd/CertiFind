@@ -11,14 +11,27 @@ export const metadata: Metadata = {
     default: "CertiFind | Validación de Certificados Oficiales",
     template: "%s | CertiFind"
   },
-  description: "Plataforma oficial para la consulta, validación y descarga de certificados de capacitación y participación.",
+  description: "Plataforma oficial para la consulta, validación y descarga de certificados de capacitación y participación de Intellecto.",
   openGraph: {
     title: "CertiFind | Validación de Certificados",
-    description: "Consulta y descarga tus certificados oficiales de forma instantánea.",
+    description: "Consulta y descarga tus certificados oficiales de forma instantánea y segura.",
     url: "https://certifind.intellecto.com.co",
     siteName: "CertiFind",
+    images: [
+      {
+        url: "/previews/Logo.png",
+        width: 800,
+        height: 600,
+        alt: "CertiFind Logo",
+      },
+    ],
     locale: "es_CO",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CertiFind | Validación de Certificados",
+    description: "Valida tus logros académicos al instante.",
   },
   robots: {
     index: true,
