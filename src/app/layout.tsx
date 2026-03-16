@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://certifind.intellecto.com.co"),
   title: {
-    default: "CertiFind | Validación de Certificados Oficiales",
+    default: "CertiFind | Validación de Certificados Oficiales Intellecto",
     template: "%s | CertiFind"
   },
   description: "Plataforma oficial para la consulta, validación y descarga de certificados de capacitación y participación de Intellecto.",

@@ -1,28 +1,35 @@
-# CertiFind 🎓
+# CertiFind 🎓 - Portal de Certificados Intellecto
 
-**CertiFind** es la plataforma oficial de Intellecto para la gestión, verificación y descarga instantánea de certificados de capacitación.
+Este proyecto está listo para ser desplegado en **https://certifind.intellecto.com.co**.
 
-URL Oficial: [https://certifind.intellecto.com.co](https://certifind.intellecto.com.co)
+## 🚀 Guía de Despliegue (Firebase App Hosting)
 
-## 🚀 Tecnologías
+Para que tu sitio funcione en el dominio oficial, sigue estos pasos:
 
-*   **Next.js 15 (App Router)** - SSR/SSG de alto rendimiento.
-*   **Tailwind CSS** - Diseño moderno y responsivo.
-*   **TypeScript** - Código robusto y tipado.
-*   **Lucide React** - Iconografía elegante.
+### 1. Preparar el Repositorio
+- Asegúrate de que todos tus cambios estén en la rama `main` de tu repositorio de GitHub.
+- Los archivos PDF deben estar en `public/certificates/`.
+- Los datos de los alumnos deben estar en `src/lib/registry.json`.
 
-## 📁 Gestión de Certificados
+### 2. Configurar Firebase App Hosting
+1. Ve a la [Consola de Firebase](https://console.firebase.google.com/).
+2. Selecciona **App Hosting** en el menú lateral.
+3. Haz clic en "Comenzar" y conecta tu repositorio de GitHub.
+4. Selecciona tu repositorio y la rama `main`.
+5. Firebase detectará automáticamente que es un proyecto de Next.js y comenzará el despliegue inicial.
 
-Para añadir nuevos certificados al sistema:
+### 3. Vincular el Dominio Personalizado
+1. Una vez finalizado el despliegue, ve a la pestaña **Custom Domains** dentro de App Hosting.
+2. Introduce `certifind.intellecto.com.co`.
+3. Firebase te proporcionará registros **CNAME** o **A**. 
+4. Accede al panel de control de tu dominio (ej. GoDaddy, Namecheap o tu servidor de DNS de Intellecto).
+5. Añade los registros proporcionados.
+6. Espera la propagación de DNS (puede tardar de 1 a 24 horas) y la generación del certificado SSL automático.
 
-1.  **Subida de archivos**: Coloca los archivos PDF en la carpeta `public/certificates/`.
-2.  **Registro de datos**: Edita el archivo `src/lib/registry.json` añadiendo un nuevo objeto con el ID, nombre del recipiente, fecha y el nombre exacto del archivo PDF.
-3.  **Despliegue**: Al hacer push a la rama principal, el sistema se actualizará automáticamente en el dominio configurado.
-
-## 🛠 Comandos
-
-*   `npm run dev`: Desarrollo local.
-*   `npm run build`: Generación de archivos optimizados para producción.
+## 📁 Estructura del Proyecto
+- `/public/certificates/`: Carpeta física para los PDFs.
+- `/src/lib/registry.json`: "Base de datos" de certificados.
+- `/src/app/`: Rutas y lógica de la aplicación Next.js 15.
 
 ---
-*Desarrollado para garantizar la validez y acceso a tus logros académicos.* 🚀
+*CertiFind es una marca de Intellecto para la validación académica segura.* 🚀
