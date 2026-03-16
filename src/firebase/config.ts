@@ -1,8 +1,9 @@
+
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-// Esta configuración se sincronizará con los valores reales al desplegar
+// Configuración oficial del proyecto CertiFind de Intellecto
 const firebaseConfig = {
   apiKey: "AIzaSy...", 
   authDomain: "studio-3335172372-76abd.firebaseapp.com",
@@ -12,7 +13,6 @@ const firebaseConfig = {
   appId: "1:1234567890:web:abcdef"
 };
 
-// Inicializar Firebase
 const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);

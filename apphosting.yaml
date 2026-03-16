@@ -1,3 +1,4 @@
+
 # Configuración de Firebase App Hosting optimizada para producción
 runConfig:
   maxInstances: 10
