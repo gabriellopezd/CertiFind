@@ -1,21 +1,20 @@
-
 {
   "certificates": [
     {
       "id": "CERT-001",
       "name": "Arquitectura Empresarial y Manejo de ABACUS",
-      "recipient": "ANA MARÍA GISSELLY PEÑA GUALTEROS",
+      "recipient": "ANA MARÍA GISSELLY PEÑA GUALTEROS",
       "issueDate": "2024-03-22",
-      "fileName": "ANA MARÍA GISSELLY PEÑA GUALTEROS.pdf",
+      "fileName": "ANA MARÍA GISSELLY PEÑA GUALTEROS.pdf",
       "description": "Certificado de Capacitación Oficial en herramientas de arquitectura.",
       "previewImage": "/previews/Imagen.png"
     },
     {
       "id": "CERT-002",
       "name": "Arquitectura Empresarial y Manejo de ABACUS",
-      "recipient": "ANDREA CAROLINA CRUZ OMAÑA",
+      "recipient": "ANDREA CAROLINA CRUZ OMAÑA",
       "issueDate": "2024-03-22",
-      "fileName": "ANDREA CAROLINA CRUZ OMAÑA.pdf",
+      "fileName": "ANDREA CAROLINA CRUZ OMAÑA.pdf",
       "description": "Certificado de Capacitación Oficial en herramientas de arquitectura.",
       "previewImage": "/previews/Imagen.png"
     },
