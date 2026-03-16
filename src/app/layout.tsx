@@ -11,18 +11,23 @@ export const metadata: Metadata = {
     default: "CertiFind | Validación de Certificados Oficiales Intellecto",
     template: "%s | CertiFind"
   },
-  description: "Plataforma oficial para la consulta, validación y descarga de certificados de capacitación y participación de Intellecto.",
+  description: "Plataforma oficial de Intellecto para la consulta, validación y descarga segura de certificados académicos.",
+  keywords: ["Certificados", "Intellecto", "Validación Académica", "Diplomas", "CertiFind"],
+  authors: [{ name: "Intellecto SAS" }],
+  icons: {
+    icon: "/previews/Logo.png",
+  },
   openGraph: {
-    title: "CertiFind | Validación de Certificados",
-    description: "Consulta y descarga tus certificados oficiales de forma instantánea y segura.",
+    title: "CertiFind | Validación de Certificados Oficiales",
+    description: "Consulta y descarga tus certificados oficiales de Intellecto de forma instantánea.",
     url: "https://certifind.intellecto.com.co",
-    siteName: "CertiFind",
+    siteName: "CertiFind Intellecto",
     images: [
       {
         url: "/previews/Logo.png",
-        width: 800,
-        height: 600,
-        alt: "CertiFind Logo",
+        width: 1200,
+        height: 630,
+        alt: "CertiFind Portal de Certificados",
       },
     ],
     locale: "es_CO",
@@ -31,12 +36,20 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "CertiFind | Validación de Certificados",
-    description: "Valida tus logros académicos al instante.",
+    description: "Valida tus logros académicos con Intellecto al instante.",
+    images: ["/previews/Logo.png"],
   },
   robots: {
     index: true,
     follow: true,
-  }
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -45,8 +58,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className={inter.className}>
+    <html lang="es" className="scroll-smooth">
+      <body className={`${inter.className} antialiased selection:bg-accent/30 selection:text-white`}>
         <Header />
         <div className="pt-20">
           {children}

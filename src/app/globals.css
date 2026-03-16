@@ -2,15 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: 210 40% 98%;
-  --foreground: 222 47% 11%;
-  --primary: 221 83% 53%;
+@layer base {
+  :root {
+    /* Intellecto Brand Colors */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    
+    --primary: 208 58% 40%; /* #2B6BA2 */
+    --primary-foreground: 210 40% 98%;
+    
+    --accent: 180 72% 37%; /* #1AA3A3 */
+    --accent-foreground: 210 40% 98%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 208 58% 40%;
+    
+    --radius: 0.75rem;
+  }
 }
 
-body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
 }
 
 @keyframes fadeInUp {
@@ -30,9 +51,14 @@ body {
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out both;
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out both;
+}
+
+/* Glassmorphism utility */
+.glass {
+  @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl;
 }
