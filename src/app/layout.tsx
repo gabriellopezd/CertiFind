@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import placeholders from "@/app/lib/placeholder-images.json";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   keywords: ["Certificados", "Intellecto", "Validación Académica", "Diplomas", "CertiFind"],
   authors: [{ name: "Intellecto SAS" }],
   icons: {
-    icon: "/previews/Logo.png",
+    icon: placeholders.logo.url,
   },
   openGraph: {
     title: "CertiFind | Validación de Certificados Oficiales",
@@ -25,10 +26,10 @@ export const metadata: Metadata = {
     siteName: "CertiFind Intellecto",
     images: [
       {
-        url: "/previews/Logo.png",
-        width: 1200,
-        height: 630,
-        alt: "CertiFind Portal de Certificados",
+        url: placeholders.ogImage.url,
+        width: placeholders.ogImage.width,
+        height: placeholders.ogImage.height,
+        alt: placeholders.ogImage.alt,
       },
     ],
     locale: "es_CO",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CertiFind | Validación de Certificados",
     description: "Valida tus logros académicos con Intellecto al instante.",
-    images: ["/previews/Logo.png"],
+    images: [placeholders.ogImage.url],
   },
   robots: {
     index: true,

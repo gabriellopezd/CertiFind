@@ -1,0 +1,21 @@
+
+{
+  "logo": {
+    "url": "https://picsum.photos/seed/intellecto-logo/200/200",
+    "width": 200,
+    "height": 200,
+    "alt": "CertiFind Intellecto Logo"
+  },
+  "certificatePreview": {
+    "url": "https://picsum.photos/seed/cert-preview/800/600",
+    "width": 800,
+    "height": 600,
+    "alt": "Vista previa del certificado"
+  },
+  "ogImage": {
+    "url": "https://picsum.photos/seed/certifind-og/1200/630",
+    "width": 1200,
+    "height": 630,
+    "alt": "CertiFind Portal de Certificados"
+  }
+}

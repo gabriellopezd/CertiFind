@@ -1,8 +1,11 @@
+
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ChevronRight, Home } from 'lucide-react';
+import placeholders from '@/app/lib/placeholder-images.json';
 
 export default function Header() {
   const pathname = usePathname();
@@ -14,8 +17,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="bg-primary/5 p-2 rounded-xl border border-primary/10 group-hover:bg-primary/10 group-hover:scale-105 transition-all duration-300 shadow-sm">
-              <img src="/previews/Logo.png" alt="CertiFind Logo" className="w-10 h-auto" />
+            <div className="bg-primary/5 p-2 rounded-xl border border-primary/10 group-hover:bg-primary/10 group-hover:scale-105 transition-all duration-300 shadow-sm overflow-hidden relative w-10 h-10">
+              <Image 
+                src={placeholders.logo.url} 
+                alt={placeholders.logo.alt} 
+                fill
+                className="object-cover"
+                data-ai-hint="company logo"
+              />
             </div>
             <span className="font-extrabold text-2xl tracking-tight text-slate-800 group-hover:text-primary transition-colors hidden sm:block">
               CertiFind

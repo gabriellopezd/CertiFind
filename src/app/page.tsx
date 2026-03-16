@@ -1,8 +1,11 @@
+
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import CertificateCard from '@/components/CertificateCard';
 import registry from '@/lib/registry.json';
+import placeholders from '@/app/lib/placeholder-images.json';
 import { Search, Award, Star, ShieldCheck, Download } from 'lucide-react';
 
 const totalCount = registry.certificates.length;
@@ -153,8 +156,14 @@ export default function HomePage() {
       <footer className="bg-slate-900 text-slate-300 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
-            <div className="bg-slate-800 p-3 rounded-full shadow-lg">
-              <img src="/previews/Logo.png" alt="CertiFind Logo" className="w-16 h-auto opacity-80" />
+            <div className="bg-slate-800 p-3 rounded-full shadow-lg relative w-20 h-20 mx-auto overflow-hidden">
+              <Image 
+                src={placeholders.logo.url} 
+                alt="CertiFind Logo" 
+                fill 
+                className="object-cover opacity-80"
+                data-ai-hint="company logo footer"
+              />
             </div>
           </div>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mb-8">
