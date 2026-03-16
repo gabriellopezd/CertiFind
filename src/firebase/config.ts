@@ -2,12 +2,12 @@ import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-// Esta configuración se obtiene dinámicamente del proyecto Firebase vinculado
+// Esta configuración se sincronizará con los valores reales al desplegar
 const firebaseConfig = {
-  apiKey: "AIzaSy...", // Los valores reales se sincronizarán al desplegar
-  authDomain: "certifind-intellecto.firebaseapp.com",
-  projectId: "certifind-intellecto",
-  storageBucket: "certifind-intellecto.firebasestorage.app",
+  apiKey: "AIzaSy...", 
+  authDomain: "studio-3335172372-76abd.firebaseapp.com",
+  projectId: "studio-3335172372-76abd",
+  storageBucket: "studio-3335172372-76abd.firebasestorage.app",
   messagingSenderId: "1234567890",
   appId: "1:1234567890:web:abcdef"
 };
