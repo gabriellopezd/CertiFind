@@ -56,17 +56,17 @@ export default function HomePage() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
             </span>
-            <span className="text-sm font-medium text-slate-200 tracking-wide">Portal de Validación Oficial</span>
+            <span className="text-sm font-medium text-slate-200 tracking-wide">Estrategia Sectorial de TI del Sector Justicia</span>
           </div>
 
           <h1 className="animate-fade-in-up text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow-2xl mb-6 leading-[1.15]"
             style={{ animationDelay: '0.1s' }}>
-            Valida tus <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-sky-300">Certificados</span> <br className="hidden sm:block" />
-            al instante.
+            ¡Felicidades por tu esfuerzo! <br className="hidden sm:block" />
+            Valida tu certificado de <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-sky-300">Arquitectura Empresarial</span> al instante.
           </h1>
           <p className="animate-fade-in-up text-lg sm:text-2xl text-slate-300 max-w-3xl mx-auto font-light"
             style={{ animationDelay: '0.2s' }}>
-            Accede a nuestra base de datos para verificar, descargar y compartir tus certificaciones de forma fácil y segura.
+            Accede a nuestra base de datos para identificar, descargar y compartir tus certificados.
           </p>
         </div>
       </section>
