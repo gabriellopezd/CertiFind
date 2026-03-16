@@ -1,12 +1,11 @@
 
-# Configuración de Firebase App Hosting optimizada para producción
+# Configuración de Firebase App Hosting para CertiFind Intellecto
 runConfig:
   maxInstances: 10
   minInstances: 0
   memory: 512Mi
   cpu: 1
 
-# Variables de entorno para el despliegue oficial
 env:
   - name: NODE_ENV
     value: production

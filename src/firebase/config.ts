@@ -3,9 +3,9 @@ import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-// Configuración oficial del proyecto CertiFind de Intellecto
+// Configuración oficial de Firebase para el proyecto CertiFind
 const firebaseConfig = {
-  apiKey: "AIzaSy...", 
+  apiKey: "AIzaSy...", // Reemplazar con la API Key real desde la consola si es necesario
   authDomain: "studio-3335172372-76abd.firebaseapp.com",
   projectId: "studio-3335172372-76abd",
   storageBucket: "studio-3335172372-76abd.firebasestorage.app",
