@@ -59,12 +59,12 @@ export default function HomePage() {
             <span className="text-sm font-medium text-slate-200 tracking-wide">Estrategia Sectorial de TI del Sector Justicia</span>
           </div>
 
-          <h1 className="animate-fade-in-up text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow-2xl mb-6 leading-[1.15]"
+          <h1 className="animate-fade-in-up text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-2xl mb-6 leading-[1.15]"
             style={{ animationDelay: '0.1s' }}>
             ¡Felicidades por tu esfuerzo! <br className="hidden sm:block" />
-            Valida tu certificado de <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-sky-300">Arquitectura Empresarial</span> al instante.
+            Valida tu certificado de <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-sky-300">Arquitectura Empresarial</span>.
           </h1>
-          <p className="animate-fade-in-up text-lg sm:text-2xl text-slate-300 max-w-3xl mx-auto font-light"
+          <p className="animate-fade-in-up text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light"
             style={{ animationDelay: '0.2s' }}>
             Accede a nuestra base de datos para identificar, descargar y compartir tus certificados.
           </p>
